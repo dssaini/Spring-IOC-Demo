@@ -3,3 +3,7 @@ To invoke or use the Spring Ioc Container we need  ApplicationContext interface.
 there are following classes which implements this interface.
 
 A POM.xml file is required to define the bean for the IOC.
+
+Dependencies are inject by two ways: 
+Property/setter injection
+Constructor injection
