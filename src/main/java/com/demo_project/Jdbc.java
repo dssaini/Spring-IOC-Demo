@@ -5,12 +5,21 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 /**
  * Hello world!
  *
  */
-public class App {
+public class Jdbc {
+    // ApplicationContext con = new ClasspathXmlApplocationContext();
     public static void main(String[] args) throws Exception {
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Config.xml");
+        JdbcTemplate  Jdbc = (JdbcTemplate)context.getBean("jdbcTemplate");
+        Jdbc.execute(Queries.CreateDb);
+        context.close();
         String url = "jdbc:Mysql://localhost:3306/";
         String user = "root";
         String password = "root";

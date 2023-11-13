@@ -1,0 +1,5 @@
+target/classes/com/demo_project/App.class
+target/classes/com/demo_project/Queries.class
+target/test-classes/com/demo_project/AppTest.class
+target/classes/com/demo_project/Jdbc.class
+target/classes/com/demo_project/SpringJdbc.class
